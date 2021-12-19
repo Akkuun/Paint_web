@@ -28,6 +28,7 @@ $(document).ready(function () {
     $("#delete").click(function () {
 
         $(".case").css("background-color", "grey");
+
     })
 
 
