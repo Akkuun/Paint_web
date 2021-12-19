@@ -57,6 +57,7 @@ $(document).ready(function () {
                 d3.select(this).append("svg").attr("width", 50).attr("height", 50).append("circle").attr("cx", 10).attr("cy", 10).attr("r", 10).style("fill", backRGB);
             })
         }
+
         isCarre=false
     });
     $("#square").click(function () {
