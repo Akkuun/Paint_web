@@ -23,7 +23,7 @@ body {
     height: 5%;
 
 }
-#icon{
+#iconDelete{
     height: 70%;
     width: 70%;
 }
@@ -34,9 +34,9 @@ body {
     height: 50px;
 
 }
-#icon2{
-    height: 95%;
-    width: 95%;
+#iconErase{
+    height: 100%;
+    width: 100%;
 }
 
 #jaune {
@@ -134,4 +134,30 @@ b{
     left: 52%;
     top:15%;
     font-size: 17px;
+}
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+
+    80% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+
+input:hover{
+
+
+    animation: bounce 1s;
+
+}
+#panneau>div:hover{
+    animation: bounce 1s;
 }

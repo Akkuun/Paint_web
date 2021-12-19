@@ -16,29 +16,14 @@ $(document).ready(function () {
         }
 
     });
-//fonction gomme, cas 1 on appuie une fois et on gomme les pixels que l'on souhaite , cas 2 on reactive la couleur sans avoir à la sélectionner
+//fonction gomme, cas 1 on appuie une fois et on gomme les pixels que l'on souhaite
     $("#gomme").click(function () {
-        isEnable = !isEnable
-
-
-        alert(backRGB);
-        alert(isEnable);
-        if (isEnable === true) {
 
             backRGB="#808080";
 
-            backRGB = background;
-        } else if (isEnable === false) {
-
-            document.getElementById("colors").onchange = function () {
-                backRGB = this.value;
-                console.log(backRGBCopie);
-            }
-            backRGB=backRGBCopie;
-        }
-
 
     });
+
 
 
 //effacement du tableau
