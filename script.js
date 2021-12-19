@@ -7,11 +7,18 @@ $(document).ready(function () {
     $(".case").mouseover(function () {
 
         if (mousePressed === true) {
-            $(this).css("background-color", "red");
+            $(this).css("background-color", backRGB);
 
         }
 
     });
+
+    var backRGB = document.getElementById("colors").value;
+
+    document.getElementById("colors").onchange = function() {
+        backRGB = this.value;
+        console.log(backRGB);
+    }
 
 
     document.onmousedown = function (e) {

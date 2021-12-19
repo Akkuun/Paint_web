@@ -16,7 +16,7 @@ body {
 }
 
 #rouge {
-margin-top: 2%;
+    margin-top: 2%;
     margin-bottom: 2%;
     align-self: center;
     width: 50px;
@@ -79,11 +79,31 @@ margin-top: 2%;
     background-color: brown;
 }
 
+#violet {
+    align-self: center;
+    width: 50px;
+    height: 50px;
+    background-color: purple;
+}
+
+#rgb {
+    align-self: center;
+
+}
+
+input[type="color"] {
+
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: grey;
+    border: grey;
+}
+
 .case {
     width: 5px;
     height: 5px;
     border: 5px;
-
 
 
 }
