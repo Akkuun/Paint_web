@@ -25,7 +25,6 @@ $(document).ready(function () {
     });
 
 
-
 //effacement du tableau
     $("#delete").click(function () {
 
