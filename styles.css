@@ -101,6 +101,13 @@ body {
 
 }
 
+#rectangle{
+
+    align-self: center;
+    width: 100px;
+    height: 50px;
+    border: solid;
+}
 input[type="color"] {
 
     display: block;

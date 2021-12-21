@@ -4,7 +4,8 @@ $(document).ready(function () {
     var backRGB = document.getElementById("colors").value;
     var _clicked_c = false;
     var _clicked_s = false;
-
+    var circle_enable = false;
+    var square_enable = false;
 
 //tracage sur toutes les div des cases du tableaux
     $
@@ -53,7 +54,7 @@ $(document).ready(function () {
     }
 
     $("#circle").click(function () {
-        if(!_clicked_c) {
+        if (!_clicked_c) {
             _clicked_c = true;
 
             $('.case').one("click", function () {
@@ -62,26 +63,28 @@ $(document).ready(function () {
         }
 
 
-
-
     });
 
     $("#square").click(function () {
+        _clicked_c = false;
 
-        if(!_clicked_s) {
-            _clicked_s = true;
+        if (!_clicked_s) {
+
 
             $('.case').click(function () {
-
-                var svgContainer = d3.select(this).append("svg")
-                    .attr("width", 200)
-                    .attr("height", 200);
-                //make the rectangle
-                var rectangle = svgContainer.append("rect")
-                    .attr("x", this)
+                _clicked_s = true;
+                d3.select(this).append("svg").attr("width", 50).attr("height", 50).append("rect").attr("x", this)
                     .attr("y", this)
                     .attr("width", 50)
-                    .attr("height", 50);
+                    .attr("height", 50)
+                    .style("fill", backRGB)
+                //make the square
+                /*    d3.select(this).append("rect")
+                        .attr("x", this)
+                        .attr("y", this)
+                        .attr("width",50)
+                        .attr("height", 50)
+                        .style("fill",backRGB)*/
             })
         }
 
