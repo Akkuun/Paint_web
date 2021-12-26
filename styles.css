@@ -168,3 +168,19 @@ input:hover{
 #panneau>div:hover{
     animation: bounce 1s;
 }
+
+svg {
+    border: solid 1px blue;
+}
+
+.square{
+    height: 300px;
+    width: 300px;
+    border: solid;
+}
+
+.carre{
+    height: 50px;
+    width: 50px;
+    border: solid;
+}

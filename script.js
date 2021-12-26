@@ -29,7 +29,8 @@ $(document).ready(function () {
 //effacement du tableau
     $("#delete").click(function () {
 
-        $(".case").css("background-color", "grey");
+        d3.selectAll("svg").remove()
+        $(".carre").remove()
 
     })
 
@@ -56,46 +57,57 @@ $(document).ready(function () {
     $("#circle").click(function () {
         circle_enable = true
         square_enable = false
-        if (circle_enable === true && square_enable === false) {
 
 
-            if (!_clicked_c) {
-                _clicked_c = true;
 
-                $('.case').one("click", function () {
+        if (!_clicked_c) {
+
+
+            $('.case').one("click", function() {
+                if (circle_enable === true) {
+                    _clicked_c = true;
+
                     d3.select(this).append("svg").attr("width", 50).attr("height", 50).append("circle").attr("cx", 10).attr("cy", 10).attr("r", 10).style("fill", backRGB);
-                })
-            }
+                }
+            })
+
         }
+
+
 
 
     });
 
-    $("#square").click(function () {
+    $("#square").click(function fb() {
         square_enable = true
         circle_enable = false
         _clicked_c = false;
-        if (circle_enable === false && square_enable === true) {
 
 
-            if (!_clicked_s) {
 
-                $('.case').click(function () {
+        if (!_clicked_s) {
+
+            $('.case').click(function () {
+                if (square_enable === true) {
+
+
                     _clicked_s = true;
-                    d3.select(this).append("svg").attr("width", 50).attr("height", 50).append("rect").attr("x", this)
-                        .attr("y", this)
-                        .attr("width", 50)
-                        .attr("height", 50)
-                        .style("fill", backRGB)
-                    //make the square
-                    /*    d3.select(this).append("rect")
-                            .attr("x", this)
-                            .attr("y", this)
-                            .attr("width",50)
-                            .attr("height", 50)
-                            .style("fill",backRGB)*/
-                })
-            }
+
+
+                    /* d3.select(this).append("svg").attr("width", 50).attr("height", 50).append("rect").attr("x", this)
+                          .attr("y", this)
+                          .attr("width", 50)
+                          .attr("height", 50)
+                          .style("fill", backRGB)*/
+                    $(this).append("<div class=\"carre\">\n")
+                    $(this).css('color', backRGB)
+
+                }
+
+
+                //make the square
+
+            })
         }
 
 
