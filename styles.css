@@ -169,9 +169,7 @@ input:hover{
     animation: bounce 1s;
 }
 
-svg {
-    border: solid 1px blue;
-}
+
 
 .square{
     height: 300px;
@@ -182,5 +180,10 @@ svg {
 .carre{
     height: 50px;
     width: 50px;
+    border: solid;
+}
+.rectangle{
+    height: 50px;
+    width: 100px;
     border: solid;
 }
