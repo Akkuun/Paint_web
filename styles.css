@@ -46,48 +46,13 @@ body {
     height: 50px;
     border: solid;
     border-radius: 30px;
-
-}
-
-#vert {
-
-    align-self: center;
-    width: 50px;
-    height: 50px;
-    background-color: green;
-}
-
-#black {
-
-    align-self: center;
-    width: 50px;
-    height: 50px;
     background-color: black;
+
 }
 
-#orange {
 
-    align-self: center;
-    width: 50px;
-    height: 50px;
-    background-color: orange;
-}
 
-#blanc {
 
-    align-self: center;
-    width: 50px;
-    height: 50px;
-    background-color: white;
-}
-
-#marron {
-
-    align-self: center;
-    width: 50px;
-    height: 50px;
-    background-color: brown;
-}
 
 #square{
     align-self: center;
@@ -100,6 +65,14 @@ body {
     align-self: center;
 
 }
+#background{
+   align-self: center;
+}
+
+#colors_b{
+    border: solid;
+}
+
 
 #rectangle{
 
@@ -136,9 +109,15 @@ input[type="color"] {
     flex-direction: column;
 }
 
-b{
-    position: fixed;
-    left: 52%;
+#b_color{
+    position: absolute;
+    left: 75%;
+    top:15%;
+    font-size: 17px;
+}
+#b_background_color{
+    position: absolute;
+    left: 83%;
     top:15%;
     font-size: 17px;
 }
@@ -187,3 +166,4 @@ input:hover{
     width: 100px;
     border: solid;
 }
+
