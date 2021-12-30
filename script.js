@@ -6,13 +6,21 @@ $(document).ready(function () {
     var _clicked_c = false;
     var _clicked_s = false;
     var _clicked_r = false;
+    var _clicked_l = false;
     var circle_enable = false;
     var square_enable = false;
     var rectangle_enable = false;
+    var line_enable = false
+    var compteur_click = 0
+
+    let coord_x = []
+    let coord_y = []
+
+    var back_def = document.getElementById("colors_b").value;
 
 //tracage sur toutes les div des cases du tableaux avec la couleur du color picker
-    $
-    (".case").mouseover(function () {
+
+    $(".case").mouseover(function () {
 
         if (mousePressed === true) {
             $(this).css("background-color", backRGB)
@@ -38,12 +46,17 @@ $(document).ready(function () {
 //effacement du tableau
     $("#delete").click(function () { //destruction de toutes les formes, traits avec le nom case_rempli
 
+        circle_enable = false
+        rectangle_enable = false
+        square_enable = false
+
 
         d3.selectAll("svg").remove()
 
-        $(".carre").remove()
-        $(".rectangle").remove()
-        $('[name="case_rempli"]').css('background-color', backRGB_background)
+            $(".carre").remove()
+            $(".rectangle").remove()
+        $('[name="case_rempli"]').remove()
+           // $('[name="case_rempli"]').css("background-color", backRGB_background)
 
 
     })
@@ -59,7 +72,7 @@ $(document).ready(function () {
     //recuperation de la couleur du color picker pour le background
     document.getElementById("colors_b").onchange = function () {
         backRGB_background = this.value;
-        $("#tableau").css("background-color",backRGB_background)
+        $("#tableau").css("background-color", backRGB_background)
 
         console.log(backRGB);
     }
@@ -76,11 +89,12 @@ $(document).ready(function () {
     document.oncontextmenu = function () {
         return false;
     }
-    //$('#circle').one("click", function() {
+
     $("#circle").click(function () {
         circle_enable = true //activation du cerlce et desactivation des autres fonction
         square_enable = false
         rectangle_enable = false
+        line_enable = false
         backRGB = backRGB_sauv
 
 
@@ -92,7 +106,7 @@ $(document).ready(function () {
                     _clicked_c = true;
 
                     d3.select(this).append("svg").attr("width", 100).attr("height", 100).append("circle").attr("cx", 30).attr("cy", 30).attr("r", 30).style("fill", backRGB); //ajoute un cercle de la couleur du color picker
-                    d3.lastChild("#tableau > avg").remove(); //correction bug
+                    d3.lastChild("#tableau > avg").remove(); //correction bug apparation plusieurs formes
                 }
             })
 
@@ -105,7 +119,9 @@ $(document).ready(function () {
         square_enable = true
         circle_enable = false
         rectangle_enable = false
+        line_enable = false
         _clicked_c = false;
+        line_enable = false
         backRGB = backRGB_sauv
 
         if (!_clicked_s) {
@@ -139,6 +155,7 @@ $(document).ready(function () {
         square_enable = false
         circle_enable = false
         rectangle_enable = true
+        line_enable = false
         _clicked_c = false;
 
         backRGB = backRGB_sauv
@@ -170,5 +187,6 @@ $(document).ready(function () {
 
 
     });
+
 
 });

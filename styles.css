@@ -111,13 +111,13 @@ input[type="color"] {
 
 #b_color{
     position: absolute;
-    left: 75%;
+    left: 68%;
     top:15%;
     font-size: 17px;
 }
 #b_background_color{
     position: absolute;
-    left: 83%;
+    left: 76%;
     top:15%;
     font-size: 17px;
 }
@@ -165,5 +165,16 @@ input:hover{
     height: 50px;
     width: 100px;
     border: solid;
+}
+#line{
+    height: 50px;
+    width: 3px;
+    background: black;
+    border: solid;
+    align-self: center;
+}
+
+.debut{
+ border: solid;
 }
 
