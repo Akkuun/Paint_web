@@ -73,6 +73,7 @@ body {
 
 #colors_b{
     border: solid;
+
 }
 
 
@@ -113,15 +114,15 @@ input[type="color"] {
 }
 
 #b_color{
-    position: absolute;
-    left: 74%;
-    top:15%;
+    position: fixed;
+    left: 76%;
+    top:16%;
     font-size: 17px;
 }
 #b_background_color{
-    position: absolute;
+    position: fixed;
     left: 86%;
-    top:15%;
+    top:16%;
     font-size: 17px;
 }
 @keyframes bounce {
