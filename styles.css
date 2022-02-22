@@ -173,7 +173,7 @@ input:hover{
 #line{
     height: 50px;
     width: 3px;
-    background: black;
+    background:#000000;
     border: solid;
     align-self: center;
 }
